@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    assembly="nhibernateexample"
+    namespace="nhibernateexample.Models">
+    <class name="Restaurant" table="Restaurants">
+        <id name="Id">
+            <generator class="guid.comb" />
+        </id>
+        <property name="Name" />
+        <property name="Rating" />
+        <set name="Chefs" table="RestaurantChef" cascade="save-update">
+            <key column="RestaurantId" />
+            <many-to-many column="ChefId" class="Chef"/>
+        </set>
+    </class>
+</hibernate-mapping>

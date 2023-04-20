@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    assembly="nhibernateexample"
+    namespace="nhibernateexample.Models">
+    <class name="Chef" table="chefs">
+        <id name="Id" column="id">
+            <generator class="guid.comb" />
+        </id>
+        <property name="FullName" />
+        <property name="DateOfBirth" />
+        <property name="YearsOfExperience" />
+    </class>
+</hibernate-mapping>
